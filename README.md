@@ -1,6 +1,6 @@
 # skill_test_tentang_anak
 
-All requirement on worksheet has been completed and also have :
+All requirement on testsheet has been completed and also have :
 
 1. State Management using GetX.
 2. Using Clean Architecture and Flutter Null Safety
