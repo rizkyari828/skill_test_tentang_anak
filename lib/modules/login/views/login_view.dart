@@ -44,43 +44,6 @@ class LoginView extends GetView<LoginController> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CommonWidget.rowHeight(height: 32),
-            InputField(
-              isDisabled: true,
-              prefixIcon: Icon(
-                Icons.person,
-                size: 30,
-              ),
-              controller: TextEditingController(),
-              keyboardType: TextInputType.text,
-              placeholder: 'Username',
-              validator: (value) {
-                return null;
-              },
-            ),
-            CommonWidget.rowHeight(),
-            InputField(
-              isDisabled: true,
-              isPassword: true,
-              prefixIcon: Icon(
-                Icons.vpn_key_rounded,
-                size: 30,
-              ),
-              controller: TextEditingController(),
-              keyboardType: TextInputType.emailAddress,
-              placeholder: 'Password',
-              password: true,
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Password is required.';
-                }
-                if (value.length < 4) {
-                  return 'Password should be more then 6 characters';
-                }
-
-                return null;
-              },
-            ),
-            CommonWidget.rowHeight(),
             CustomButton(
               buttonText: 'SIGN IN ANONYMOUSLY',
               width: MediaQuery.of(context).size.width,
