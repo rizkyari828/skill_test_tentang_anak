@@ -22,11 +22,6 @@ class CommonWidget {
       ),
       backgroundColor: Colors.white,
       elevation: 0.0,
-      actions: [
-        IconButton(
-            onPressed: () => Get.toNamed(Routes.CREATE),
-            icon: Icon(Icons.add, color: color)),
-      ],
     );
   }
 
@@ -38,23 +33,28 @@ class CommonWidget {
     return SizedBox(width: width);
   }
 
-  static Text headText({String text = "", Color color = ColorConstants.black}) {
+  static Text headText(
+      {String text = "",
+      Color color = Colors.black87,
+      TextAlign align: TextAlign.start}) {
     return Text(
       text,
-      maxLines: 3,
+      textAlign: align,
       style: TextStyle(
-        color: color,
-        fontWeight: FontWeight.w600,
-        fontSize: 20,
-        fontFamily: 'Poppins',
-      ),
+          color: color,
+          fontWeight: FontWeight.w600,
+          fontSize: 23,
+          fontFamily: 'Poppins'),
     );
   }
 
   static Text minHeadText(
-      {String text = "", Color color = ColorConstants.black}) {
+      {String text = "",
+      Color color = Colors.black87,
+      TextAlign align: TextAlign.start}) {
     return Text(
       text,
+      textAlign: align,
       style: TextStyle(
           color: color,
           fontWeight: FontWeight.w600,
@@ -64,35 +64,36 @@ class CommonWidget {
   }
 
   static Text subtitleText(
-      {String text = "", Color color = ColorConstants.black}) {
-    return Text(
-      text,
-      maxLines: 3,
-      style: TextStyle(
-        color: color,
-        fontWeight: FontWeight.normal,
-        fontSize: 13,
-        letterSpacing: 0.15,
-        fontFamily: 'Poppins',
-        overflow: TextOverflow.ellipsis,
-      ),
-    );
-  }
-
-  static Text minSubtitleText(
-      {String text = "", Color color = ColorConstants.black}) {
+      {String text = "",
+      Color color = Colors.black87,
+      FontWeight fontWeight = FontWeight.normal}) {
     return Text(
       text,
       style: TextStyle(
           color: color,
-          fontWeight: FontWeight.normal,
+          fontWeight: fontWeight,
+          fontSize: 13,
+          letterSpacing: 0.15,
+          fontFamily: 'Poppins'),
+    );
+  }
+
+  static Text minSubtitleText(
+      {String text = "",
+      Color color = Colors.black87,
+      FontWeight fontWeight = FontWeight.normal}) {
+    return Text(
+      text,
+      style: TextStyle(
+          color: color,
+          fontWeight: fontWeight,
           fontSize: 12,
           letterSpacing: 0.15,
           fontFamily: 'Poppins'),
     );
   }
 
-  static Text bodyText({String text = "", Color color = ColorConstants.black}) {
+  static Text bodyText({String text = "", Color color = Colors.black87}) {
     return Text(
       text,
       style: TextStyle(
@@ -104,8 +105,7 @@ class CommonWidget {
     );
   }
 
-  static Text captionText(
-      {String text = "", Color color = ColorConstants.black}) {
+  static Text captionText({String text = "", Color color = Colors.black87}) {
     return Text(
       text,
       style: TextStyle(

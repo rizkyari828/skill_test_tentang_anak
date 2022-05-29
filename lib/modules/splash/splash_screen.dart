@@ -12,7 +12,7 @@ class SplashScreen extends StatelessWidget {
         children: [
           Text('Skill Test',
               style: TextStyle(
-                  fontSize: 80.0,
+                  fontSize: 60.0,
                   fontWeight: FontWeight.bold,
                   color: ColorConstants.mainColor,
                   letterSpacing: 0.4,

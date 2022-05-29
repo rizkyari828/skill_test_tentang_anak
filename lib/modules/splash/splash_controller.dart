@@ -12,12 +12,12 @@ class SplashController extends GetxController {
     var storage = Get.find<SharedPreferences>();
     try {
       if (storage.getString(StorageConstants.token) != null) {
-        Get.toNamed(Routes.HOME);
+        Get.toNamed(Routes.LOGIN);
       } else {
-        Get.toNamed(Routes.HOME);
+        Get.toNamed(Routes.LOGIN);
       }
     } catch (e) {
-      Get.toNamed(Routes.HOME);
+      Get.toNamed(Routes.LOGIN);
     }
   }
 }

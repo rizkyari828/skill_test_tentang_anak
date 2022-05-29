@@ -1,11 +1,8 @@
 import 'package:get/get.dart';
 
-import '../modules/create/bindings/create_binding.dart';
-import '../modules/create/views/create_view.dart';
-import '../modules/detail/bindings/detail_binding.dart';
-import '../modules/detail/views/detail_view.dart';
+import '../modules/login/bindings/login_binding.dart';
+import '../modules/login/views/login_view.dart';
 import '../modules/modules.dart';
-import '../modules/search/bindings/search_binding.dart';
 
 part 'app_routes.dart';
 
@@ -24,19 +21,9 @@ class AppPages {
       binding: HomeBinding(),
     ),
     GetPage(
-      name: Routes.SEARCH,
-      page: () => SearchView(),
-      binding: SearchBinding(),
-    ),
-    GetPage(
-      name: Routes.DETAIL,
-      page: () => DetailView(),
-      binding: DetailBinding(),
-    ),
-    GetPage(
-      name: Routes.CREATE,
-      page: () => CreateView(),
-      binding: CreateBinding(),
+      name: Routes.LOGIN,
+      page: () => LoginView(),
+      binding: LoginBinding(),
     ),
   ];
 }

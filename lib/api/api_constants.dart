@@ -1,3 +1,3 @@
 class ApiConstants {
-  static const baseUrl = 'http://absensi.picodio.co.id/';
+  static const baseUrl = 'http://demo6772422.mockable.io/';
 }
